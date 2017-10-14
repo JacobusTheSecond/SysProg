@@ -1,0 +1,10 @@
+(a):
+10 mallocs, 1 free 
+
+-> im speicher steht [0][1][2][3][4][5][6][7][8], und die [9] wurde erfolgreich gefreed
+
+(b):
+d[2]... es gibt ein paar sprachen, wo der index von arrays mit 1 anfängt. C gehört nicht dazu, und alle anderen gehören vom rechner entfernt
+
+(c):
+es wurde ein pointer gemallocd, aber kein feld für das int selbst, also wird die 5 ins "nichts", bzw an die adresse, die in dem frisch gemallocden pointer steht, geschrieben, was zu einem speicherabzug führt

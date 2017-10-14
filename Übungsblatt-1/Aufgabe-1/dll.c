@@ -106,8 +106,6 @@ void fillNode(node* node, char* name){
 void createSortedDLL(char const* const fileName){
 	FILE* file = fopen(fileName,"r");
 	char line[256];
-	char delimeter[] = " ";
-	char* ptr;
 	node* head = calloc(1,sizeof(node));
 
 	while (fgets(line,sizeof(line),file)){
@@ -126,14 +124,12 @@ void createSortedDLL(char const* const fileName){
 	fclose(file);
 	destroyList(head);
 	free(head);
-
-	return 0;
 }
 
 
 
 
-main(int argc, char *argv[]){
+int main(int argc, char *argv[]){
 	if(argc == 2){
 		char const* const fileName = argv[1];
 		createSortedDLL(fileName);
